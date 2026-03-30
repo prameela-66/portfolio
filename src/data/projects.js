@@ -1,0 +1,38 @@
+export const projectsData = [
+  {
+    id: 1,
+    title: "Smart Chatbot",
+    description: "Built an AI-powered chatbot using Python and LLMs that processes YouTube links and PDFs to deliver context-aware answers. Leveraging NLP for high accuracy.",
+    tech: ["Python", "LLMs", "NLP"],
+    github: "https://github.com/prameela-66/smart-chatbot",
+    live: "#",
+    image: "https://images.unsplash.com/photo-1542831371-29b0f74f9713?auto=format&fit=crop&q=80&w=800",
+  },
+  {
+    id: 2,
+    title: "Orphanage Connect",
+    description: "Developed a Django-based platform connecting donors with orphanages, featuring donation tracking, image uploads, and automated PDF receipts.",
+    tech: ["Django", "Python", "PostgreSQL"],
+    github: "https://github.com/prameela-66/orphanage-connect",
+    live: "#",
+    image: "https://images.unsplash.com/photo-1618477388954-7852f32655ec?auto=format&fit=crop&q=80&w=800",
+  },
+  {
+    id: 3,
+    title: "FestivePal UI/UX",
+    description: "Designed a complete UI/UX, event alarms, shopping lists, Puja guides, and reels feature to enhance festival engagement and experience.",
+    tech: ["Figma", "UI/UX Design"],
+    github: "#",
+    live: "#",
+    image: "https://images.unsplash.com/photo-1560493676-04071c5f467b?auto=format&fit=crop&q=80&w=800",
+  },
+  {
+    id: 4,
+    title: "To-Do List Application",
+    description: "Created a Django task management app with user authentication, CRUD functionality, and deadline tracking.",
+    tech: ["Django", "Python", "Bootstrap"],
+    github: "https://github.com/prameela-66/todo-app",
+    live: "#",
+    image: "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?auto=format&fit=crop&q=80&w=800",
+  },
+];
