@@ -41,8 +41,8 @@ const About = () => {
         >
           <div className="w-64 h-64 md:w-80 md:h-80 bg-slate-800 rounded-3xl overflow-hidden relative group">
             <img 
-              src="https://placehold.co/400x400/0f172a/10b981?text=Lalli" 
-              alt="Lalli" 
+              src="https://placehold.co/400x400/0f172a/10b981?text=Prameela+Naga+Sri" 
+              alt="Prameela Naga Sri" 
               className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
             />
             <div className="absolute inset-0 bg-emerald-500/20 mix-blend-overlay"></div>

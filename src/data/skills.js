@@ -8,4 +8,5 @@ export const skillsData = [
   { name: "MySQL", icon: "Database", color: "text-blue-600" },
   { name: "Git/GitHub", icon: "GitBranch", color: "text-gray-400" },
   { name: "NLP / ML", icon: "Cpu", color: "text-indigo-500" },
+  
 ];

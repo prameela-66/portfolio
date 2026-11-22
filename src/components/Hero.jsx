@@ -1,70 +1,140 @@
-import React from "react";
-import { motion } from "framer-motion";
-import { ArrowRight } from "lucide-react";
+import React from 'react';
+import { Sparkles, ArrowRight } from 'lucide-react'; 
+import { scrollingTitles, ringText1, ringText2, ringText3, ringText4, ringText5 } from '../constants/index.js'; 
+
+// --- Sub-Component for the Scrolling Text Effect (UNMODIFIED) ---
+const MarqueeText = ({ items }) => {
+    // Combine the items and double the list for seamless continuous scrolling
+    const marqueeContent = [...items, ...items]; 
+
+    return (
+        <div className="overflow-hidden whitespace-nowrap pt-2">
+            <div className="inline-block animate-marquee hover:animation-play-state-paused">
+                {/* DECREASED TEXT SIZE CLASSES: text-lg md:text-xl */}
+                <span className="text-lg md:text-xl font-semibold text-white/70">
+                    {marqueeContent.map((title, index) => (
+                        <React.Fragment key={index}>
+                            {title}
+                            {/* Separator between titles */}
+                            {index < marqueeContent.length - 1 && (
+                                <span className="text-primary-blue mx-6">•</span>
+                            )}
+                        </React.Fragment>
+                    ))}
+                </span>
+            </div>
+        </div>
+    );
+};
 
 const Hero = () => {
   return (
-    <section id="hero" className="relative w-full h-screen mx-auto flex items-center justify-center overflow-hidden">
-      <div className="absolute inset-0 z-0">
-        <div className="absolute top-20 left-10 w-72 h-72 bg-emerald-500/10 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-20 right-10 w-96 h-96 bg-indigo-500/10 rounded-full blur-3xl animate-pulse delay-700"></div>
-      </div>
-
-      <div className="px-6 max-w-7xl mx-auto flex flex-col items-center text-center z-10">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, ease: "easeOut" }}
-        >
-          <p className="text-emerald-400 font-medium text-lg mb-4 tracking-widest uppercase">
-            Product Focused Developer
-          </p>
-          <h1 className="text-white font-black lg:text-[80px] sm:text-[60px] xs:text-[50px] text-[40px] lg:leading-[98px] mt-2 mb-6">
-            Hi, I'm <span className="text-emerald-400 transition-colors duration-300 hover:text-emerald-300">Lalli</span>
-          </h1>
-          <p className="text-slate-400 lg:text-[20px] sm:text-[18px] text-[16px] max-w-2xl mx-auto mb-10 leading-relaxed font-light">
-            I build high-performance, responsive <span className="text-slate-100 font-medium">Full Stack applications</span> with a focus on clean code and exceptional user experience.
-          </p>
-        </motion.div>
-
-        <motion.div
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.5, delay: 0.3 }}
-          className="flex flex-col sm:flex-row gap-4"
-        >
-          <a
-            href="#projects"
-            className="group relative inline-flex items-center justify-center px-8 py-3.5 overflow-hidden font-bold text-white transition-all duration-300 bg-emerald-500 rounded-full hover:bg-emerald-600 focus:outline-none shadow-[0_0_20px_rgba(16,185,129,0.3)] hover:shadow-[0_0_25px_rgba(16,185,129,0.5)]"
-          >
-            View My Projects
-            <ArrowRight className="ml-2 transition-transform duration-300 group-hover:translate-x-1" size={20} />
-          </a>
-          <a
-            href="#contact"
-            className="px-8 py-3.5 border-2 border-slate-700 hover:border-slate-500 text-slate-300 hover:text-white rounded-full font-bold transition-all duration-300"
-          >
-            Contact Me
-          </a>
-        </motion.div>
-      </div>
-
-      <div className="absolute bottom-10 w-full flex justify-center items-center pointer-events-none">
-        <a href="#about" className="pointer-events-auto">
-          <div className="w-[35px] h-[64px] rounded-3xl border-4 border-slate-700 flex justify-center items-start p-2 hover:border-emerald-500 transition-colors duration-300">
-            <motion.div
-              animate={{
-                y: [0, 24, 0],
-              }}
-              transition={{
-                duration: 1.5,
-                repeat: Infinity,
-                repeatType: "loop",
-              }}
-              className="w-3 h-3 rounded-full bg-emerald-500"
+    <section id="home" className="section-padding min-h-screen flex items-center justify-center relative overflow-hidden">
+      
+      {/* --- Main Content Area (Centered) --- */}
+      <div className="relative z-10 text-center w-full max-w-4xl pt-20 -translate-y-16">
+        
+        {/* --- 1. Circular Photo and Rings --- */}
+        {/* 🛑 DECREASED CONTAINER SIZE */}
+        <div className="relative flex items-center justify-center 
+             w-[320px] h-[320px] md:w-[400px] md:h-[400px] mx-auto mb-8">
+          
+          {/* Main Photo Container - 🛑 DECREASED PHOTO SIZE */}
+          <div className="absolute w-52 h-52 md:w-64 md:h-64 rounded-full overflow-hidden 
+               border-4 border-primary-blue/50 shadow-custom z-70">
+            
+            <img 
+              src="/my3.jpg" 
+              alt="Navaneethakrishnan" 
+              className="w-full h-full object-cover" 
             />
           </div>
+
+          {/* --- ROTATING EFFECTS (Rings and Stars remain proportional) --- */}
+          
+          {/* Ring 1 (Inner) - Opacity /20 (VISIBLE) */}
+          <div className="absolute w-[110%] h-[110%] rounded-full border-4 border-primary-blue/20 flex items-center justify-center animate-spin-slow">
+            <span className="absolute text-[10px] text-white whitespace-nowrap p-4 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 rotate-[25deg]">
+              {ringText1}
+            </span>
+            {/* Bright Stars */}
+            <Sparkles className="absolute w-5 h-5 text-white top-[15%] right-[20%] transform rotate-[100deg]" />
+            <Sparkles className="absolute w-4 h-4 text-primary-blue/90 bottom-[5%] left-[30%] transform rotate-[200deg]" />
+            <Sparkles className="absolute w-3 h-3 text-white/80 top-[40%] left-[80%]" />
+            {/* Bright Dot */}
+            <div className="absolute w-2 h-2 rounded-full bg-primary-blue top-[50%] right-0 -mr-1"></div>
+          </div>
+          
+          {/* Ring 2 (Middle) - Opacity /15 (VISIBLE) */}
+          <div className="absolute w-[135%] h-[135%] rounded-full border-2 border-primary-blue/15 flex items-center justify-center animate-spin-reverse">
+            <span className="absolute text-[10px] text-white whitespace-nowrap p-4 bottom-[5%] right-[20%] transform rotate-[-45deg]">
+              {ringText2}
+            </span>
+            {/* Bright Stars */}
+            <Sparkles className="absolute w-5 h-5 text-primary-blue top-[30%] right-[15%]" />
+            <Sparkles className="absolute w-4 h-4 text-white/90 bottom-[20%] left-[10%]" />
+            {/* Bright Dot */}
+            <div className="absolute w-2 h-2 rounded-full bg-primary-blue top-[30%] right-[5%]"></div>
+          </div>
+
+          {/* Ring 3 (Outer) - Opacity /10 (VISIBLE) */}
+          <div className="absolute w-[160%] h-[160%] rounded-full border border-primary-blue/10 flex items-center justify-center animate-spin-slow">
+            <span className="absolute text-[10px] text-white/90 whitespace-nowrap p-4 top-[5%] left-[5%] transform rotate-[-120deg]">
+              {ringText3}
+            </span>
+            <Sparkles className="absolute w-3 h-3 text-primary-blue/70 top-[15%] right-[40%]" />
+            <div className="absolute w-2 h-2 rounded-full bg-primary-blue/50 bottom-[10%] left-[10%]"></div>
+          </div>
+          
+          {/* Ring 4 (Extra Outer) - BORDER REMOVED */}
+          <div className="absolute w-[185%] h-[185%] rounded-full border-0 flex items-center justify-center animate-spin-reverse">
+            <span className="absolute text-[9px] text-white/80 whitespace-nowrap p-4 top-[30%] left-[10%] transform rotate-[90deg]">
+              {ringText4}
+            </span>
+            <Sparkles className="absolute w-3 h-3 text-white/40 bottom-[10%] right-[30%]" />
+            <div className="absolute w-1 h-1 rounded-full bg-primary-blue/20 top-[40%] right-[10%]"></div>
+          </div>
+
+          {/* Ring 5 (Farthest) - Border already removed (border-0) */}
+          <div className="absolute w-[210%] h-[210%] rounded-full border-0 flex items-center justify-center animate-spin-slow">
+            <span className="absolute text-[9px] text-white/80 whitespace-nowrap p-4 bottom-[15%] right-[25%] transform rotate-[-150deg]">
+              {ringText5}
+            </span>
+            <Sparkles className="absolute w-2 h-2 text-primary-blue/70 bottom-[20%] left-[20%] transform rotate-[45deg]" />
+          </div>
+
+        </div>
+        
+        {/* --- 2. Name and Titles --- */}
+        
+        {/* Name */}
+        <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-4xl font-extrabold text-white mb-2">
+          Hey, I'm <span className="text-primary-blue">Mythri Adireddi</span>
+        </h1>
+        
+        {/* Scrolling Titles Area */}
+        <div className="relative w-full overflow-hidden h-10 mb-8">
+            <MarqueeText items={scrollingTitles} />
+        </div>
+
+        {/* --- 3. CTA Button (UNMODIFIED) --- */}
+        <a 
+            href="#contact"
+            className="inline-flex items-center gap-3 py-3 px-8 rounded-full font-bold text-white text-lg mt-4 
+                       bg-gradient-to-r from-pink-600 to-purple-600 shadow-custom
+                       hover:from-pink-500 hover:to-purple-500 transition-all duration-300 transform hover:scale-[1.03]"
+        >
+          Let's Connect <ArrowRight className="w-5 h-5" />
         </a>
+
+      </div>
+      
+      {/* Background Dots/Stars (Increased size and brightness) */}
+      <div className="absolute inset-0 z-0 opacity-10 pointer-events-none">
+          <Sparkles className="absolute top-10 right-20 w-10 h-10 text-white/50" />
+          <Sparkles className="absolute top-1/4 left-1/4 w-6 h-6 text-primary-blue/70" />
+          <div className="absolute bottom-1/4 right-1/4 w-4 h-4 rounded-full bg-white/50"></div>
+          <div className="absolute top-2/3 left-1/2 w-3 h-3 rounded-full bg-primary-blue/30"></div>
       </div>
     </section>
   );
