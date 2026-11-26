@@ -1,3 +1,4 @@
+import smartResumeImg from "../assets/smartresume.png";
 export const projectsData = [
   {
     id: 1,
@@ -11,7 +12,7 @@ export const projectsData = [
     tech: ["FastAPI", "Python", "JavaScript", "NLP"],
     github: "https://github.com/prameela-66", // Placeholder or actual link
     live: "https://ats-resume-builder-sable.vercel.app/",
-    image: "src/assets/smartresume.png",
+    image: smartResumeImg,
   },
   {
     id: 2,
