@@ -1,4 +1,5 @@
 import smartResumeImg from "../assets/smartresume.png";
+import todoAppImg from "../assets/todoapp.png";
 export const projectsData = [
   {
     id: 1,
@@ -81,7 +82,7 @@ export const projectsData = [
     tech: ["Django", "Python", "SQLite", "Bootstrap"],
     github: "https://github.com/prameela-66/Todo-Management-Web-Application",
     live: "https://todo-management-web-application-three.vercel.app",
-    image: "src/assets/todoapp.png",
+    image: todoAppImg,
   },
   {
     id: 6,

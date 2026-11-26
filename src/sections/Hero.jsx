@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Linkedin, Github, Cpu, Code2 } from 'lucide-react';
-
+import placeholderImage from '../assets/placeholder.png'; // Placeholder image for error handling
 const Hero = () => {
   const roles = [
     "Coding Enthusiast",
@@ -50,12 +50,12 @@ const Hero = () => {
         >
           <div className="w-full h-full rounded-full overflow-hidden border-2 border-white dark:border-slate-900 bg-slate-100 dark:bg-slate-800 group">
             <img
-              src="src/assets/prameela.jpeg"
+              src={placeholderImage}
               alt="Prameela Naga Sri"
               className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
               onError={(e) => {
                 e.currentTarget.onerror = null;
-                e.currentTarget.src = "/assets/prameela.jpeg";
+                e.currentTarget.src = placeholderImage; // Fallback image in case of error
               }}
             />
           </div>
