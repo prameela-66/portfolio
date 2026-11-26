@@ -10,22 +10,35 @@ export const projectsData = [
     ],
     tech: ["FastAPI", "Python", "JavaScript", "NLP"],
     github: "https://github.com/prameela-66", // Placeholder or actual link
-    live: "#",
-    image: "https://images.unsplash.com/photo-1586281380349-632531db7ed4?auto=format&fit=crop&q=80&w=800",
+    live: "https://ats-resume-builder-sable.vercel.app/",
+    image: "src/assets/smartresume.png",
   },
   {
     id: 2,
-    title: "TravelXplorer",
-    subtitle: "Smart Tourism & Planning Platform",
-    description: "Built a full-stack MERN tourism platform with JWT authentication, REST APIs, itinerary planning, responsive React frontend, and MongoDB backend supporting 500+ destinations.",
+    title: "Personal Developer Portfolio",
+    subtitle: "Modern Responsive Portfolio with 60-30-10 Design",
+    description: "Designed and engineered an accessible personal developer portfolio following the 60-30-10 color architecture and WCAG AA/AAA standards (≥ 4.5:1 contrast). Features dynamic dark/light theme switching, live code syntax highlighting (One Dark Pro & GitHub Light), and fluid Framer Motion orbital animations.",
     bullets: [
-      "Built a full-stack MERN tourism platform with JWT authentication, REST APIs, itinerary planning, responsive React frontend.",
-      "MongoDB backend supporting 500+ destinations."
+      "Engineered an accessible portfolio adhering to the 60-30-10 color rule and WCAG AA contrast standards.",
+      "Implemented dynamic dark/light theme toggling, interactive code syntax themes (One Dark Pro & GitHub Light), and responsive Framer Motion animations."
     ],
-    tech: ["Node.js", "React.js", "Tailwind CSS", "MongoDB"],
-    github: "https://github.com/prameela-66",
-    live: "#",
-    image: "https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?auto=format&fit=crop&q=80&w=800",
+    tech: ["React", "Vite", "Tailwind CSS v4", "Framer Motion", "Lucide React"],
+    github: "https://github.com/prameela-66/portfolio",
+    live: "#home",
+    image: "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&q=80&w=800",
+    role: "Frontend & UI/UX Developer",
+    category: "Web Development",
+    problem: "Many developer portfolios suffer from inconsistent color schemes, low text contrast, and static designs that fail to demonstrate engineering craftsmanship.",
+    solution: "Built a modern, accessible web portfolio implementing a disciplined 60-30-10 color hierarchy, WCAG AA contrast, fluid animations, and developer-familiar syntax highlighting.",
+    features: [
+      "60-30-10 color system across dark and light modes",
+      "Guaranteed WCAG AA/AAA text contrast (≥ 4.5:1)",
+      "Interactive code syntax highlighting block with One Dark Pro & Dracula options",
+      "Interactive internship timeline, skill grids, and project case cards",
+      "Optimized orbital animation header with responsive layout"
+    ],
+    challenges: "Calibrating contrast tokens across themes while preserving modern gradients and subtle orbital effects.",
+    outcome: "High-performance, accessible portfolio showcasing full-stack capabilities with a 100% responsive design."
   },
   {
     id: 3,
@@ -65,9 +78,9 @@ export const projectsData = [
       "Implemented Django ORM, MVT architecture, and task completion tracking for efficient task management."
     ],
     tech: ["Django", "Python", "SQLite", "Bootstrap"],
-    github: "https://github.com/prameela-66/todo-app",
-    live: "#",
-    image: "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?auto=format&fit=crop&q=80&w=800",
+    github: "https://github.com/prameela-66/Todo-Management-Web-Application",
+    live: "https://todo-management-web-application-three.vercel.app",
+    image: "src/assets/todoapp.png",
   },
   {
     id: 6,
@@ -84,4 +97,3 @@ export const projectsData = [
     image: "https://images.unsplash.com/photo-1560493676-04071c5f467b?auto=format&fit=crop&q=80&w=800",
   }
 ];
-
