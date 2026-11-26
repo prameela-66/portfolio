@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Linkedin, Github, Cpu, Code2 } from 'lucide-react';
-import placeholderImage from '../assets/placeholder.png'; // Placeholder image for error handling
+import placeholderImage from '../assets/prameela.jpeg'; // Placeholder image for error handling
 const Hero = () => {
   const roles = [
     "Coding Enthusiast",
